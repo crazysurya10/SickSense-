@@ -164,7 +164,7 @@
     font-size: 32;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position:absolute;
-    left: 4%;
+    left: 1%;
     top: 20px;
     margin-top: 3%;
     line-height:1.9;
@@ -289,8 +289,14 @@
     font-size: 32;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position:absolute;
-    left: 4%;
+    left: 1%;
     top: 20px;
     margin-top: 3%;
     line-height:2.7;
+}
+
+.map-img{
+  background-color: transparent;
+  width: 6%;
+  height: 6%;
 }
