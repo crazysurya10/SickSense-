@@ -46,8 +46,8 @@
 
   <div id="content">
     <div class="search-container">
-      <input type="text" class="search-bar" placeholder="Search...">
-      <button class="search-button">Search</button>
+      <input type="text" class="search-bar" id="finder-search" placeholder="Search...">
+      <button class="search-button" onclick="callFlaskRoute()">Search1</button>
     </div>
     <h1 id="finder-title">
       F
@@ -81,6 +81,20 @@
     </div>
 
     <script>
+
+      function callFlaskRoute() {
+              //token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InN1cnlhYmhhdml0aEBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjExODg5IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy92ZXJzaW9uIjoiMTA5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9saW1pdCI6IjEwMCIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcCI6IkJhc2ljIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9sYW5ndWFnZSI6ImVuLWdiIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9leHBpcmF0aW9uIjoiMjA5OS0xMi0zMSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcHN0YXJ0IjoiMjAyNS0wMy0wMiIsImlzcyI6Imh0dHBzOi8vYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTc0MTA3NTE0MSwibmJmIjoxNzQxMDY3OTQxfQ.aiULc6xNM4xZHMco3-Zsh6GFda-WaHfWp3Wrn2fZj7M"
+              const textbox = document.getElementById("finder-search");
+              var param2="["+textbox.value+"]";
+              //console.log("param1::::"+param1)
+              fetch('/finder/'+param2, {  // Replace '/your_flask_route' with your actual route
+                method: 'GET', // Or 'GET' depending on your needs
+                // You can add headers or body here if needed
+              })
+      }
+
+
+
 
       const popupBttn = document.getElementById('popupButton');
       const closeBttn = document.getElementById('closeButton');
